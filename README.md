@@ -1,6 +1,6 @@
 ﻿# 第二級資料（informed prior 用）— 盤點與新抓（2026-11-05）
 
-對照老師《BN資料需求與下載清單_v1》第二級 2-1～2-11。來源分三類：**既有** = 從 `其他東西\團隊內部討論紀錄\中綱BN建構\Data\Data_taipei\` 複製；**新抓** = 11/5 從開放平台抓；**學弟** = 11/5 學弟蒐集（`北士科BN_第二級資料整理_20261105.zip`），已按類別併入各子資料夾，他的下載紀錄（URL、SHA256）在 `_來源紀錄_學弟整理_20261105\`。
+對照老師《BN資料需求與下載清單_v1》第二級 2-1～2-11。來源分三類：**既有** = 從 `其他東西\團隊內部討論紀錄\中綱BN建構\Data\Data_taipei\` 複製；**新抓** = 11/5 從開放平台抓；**學弟** = 11/5 學弟蒐集（`北士科BN_第二級資料整理_20261105.zip`），已按類別併入各子資料夾，來源 URL 列在文末「學弟項來源 URL」。
 
 | 子資料夾 | 老師項目 | 內容 | 狀態／備註 |
 |---|---|---|---|
@@ -25,3 +25,19 @@
 - 2-5 若要歷史車流，寫排程每 5 分鐘抓快照存起來，或函詢交通局交控中心。
 - 2-6 TDX 註冊後抓捷運站進出與歷史（公車路線站牌已有，可和 1-10 捷運 OD 互補）。
 - 2-2 地下層數：北士科建照 → 都發局建管處申請。
+
+## 學弟項來源 URL（2026-11-05 下載）
+| 子資料夾 | 檔案 | 來源 |
+|---|---|---|
+| 2-2_建物屬性 | 稅捐處_臺北市房屋稅稅源_按構造別.pdf | https://www-ws.gov.taipei/001/Upload/336/relfile/16016/102791/76ceea63-ff8a-435d-9230-bcd3bb7bbf94.pdf（稅捐處統計頁 https://tpctax.gov.taipei/cp.aspx?n=F34ED8B64FB090F0&s=3E5427354677130B） |
+| 2-2_建物屬性 | 稅捐處_臺北市課徵房屋概況_按樓層及屋齡別.pdf | https://www-ws.gov.taipei/001/Upload/336/relfile/16016/102791/feacd735-b514-4470-9969-81bd17bc9e66.pdf |
+| 2-4_醫事機構_學校 | 衛福部_醫療機構與人員基本資料_20241231_全國.ods、士林北投_醫療機構_原表欄序_539筆.csv（由 ods 篩出） | https://www.mohw.gov.tw/dl-96581-66dbb751-f83a-416a-a998-893222e20fef.html（data.gov.tw 資料集 15393） |
+| 2-5_VD車流 | 目標道路VD位置_洲美快速道路_承德路_大度路.csv（由 VD 靜態資料篩出） | https://tcgbusfs.blob.core.windows.net/blobtisv/VD.xml |
+| 2-6_TDX_運輸 | 臺北市公車_GetRoute／GetStop／GetStopLocation／GetTimeTable（.json 為 .gz 解壓，.csv 為整理） | https://tcgbusfs.blob.core.windows.net/blobbus/GetRoute.gz、GetStop.gz、GetStopLocation.gz、GetTimeTable.gz |
+| 2-6_TDX_運輸 | 公車資料官方介接文件.pdf | https://www-ws.gov.taipei/001/Upload/458/relfile/22545/6554360/529e6e8b-a3a3-4c79-8119-09e242a03fb7.pdf |
+| 2-8_滯洪池_濕地 | 滯洪容量與規劃狀態_含來源.csv | 各筆來源在檔內「來源」欄（heo.gov.taipei 水利處各滯洪池頁） |
+| 2-10_山坡地_土石流_液化 | 臺北市山坡地範圍修正1150512_SHP.zip | https://data.taipei/api/dataset/7329dffa-833d-493a-a380-3af987f37c46/resource/33109701-d449-4c19-8972-e4327dfa6404/download（data.gov.tw 121420） |
+| 2-10_山坡地_土石流_液化 | 農業部土石流潛勢溪流_1753條_20260126_TWD97_SHP.zip | https://data.moa.gov.tw/GetOpenDataFile.aspx?id=J71&FileType=SHP&RID=71084（data.gov.tw 176524） |
+| 2-10_山坡地_土石流_液化 | 農業部土石流潛勢溪流影響範圍_20260126_TWD97_SHP.zip | https://data.moa.gov.tw/OpenData/GetOpenDataFile.aspx?id=J73&FileType=SHP&RID=71085（data.gov.tw 176526） |
+
+學弟試過但失敗的：液化潛勢 GeoJSON `https://soil.taipei/Taipei2019/Main/pages/TPLiquid_97.GeoJSON`（主機已不存在，新版在 data.taipei 資料集 ec40e067-930f-4058-b7dc-71399d5f3147）；文資局歷史建築（本資料夾已另抓到）。
